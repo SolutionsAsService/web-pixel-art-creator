@@ -1,0 +1,253 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #2c3e50, #bdc3c7);
+  color: #ecf0f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(44, 62, 80, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: rgba(44, 62, 80, 0.8);
+  border-bottom: 2px solid #ecf0f1;
+}
+
+header h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3rem;
+  color: #ecf0f1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bdc3c7;
+}
+
+/* Buttons */
+button {
+  background: #34495e;
+  color: #ecf0f1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #2c3e50;
+  transform: scale(1.05);
+}
+
+button:active {
+  background: #1f2a38;
+  transform: scale(0.95);
+}
+
+/* Form Elements */
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  background: #34495e;
+  color: #ecf0f1;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+  border-color: #ecf0f1;
+  box-shadow: 0 0 5px rgba(236, 240, 241, 0.5);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Labels */
+label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color: #ecf0f1;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Checkboxes and Radio Buttons */
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #bdc3c7;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #2c3e50;
+}
+
+td {
+  background: #34495e;
+}
+
+/* Lists */
+ul, ol {
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #bdc3c7;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  padding: 20px;
+  background: rgba(44, 62, 80, 0.8);
+  text-align: center;
+  color: #ecf0f1;
+  border-top: 2px solid #ecf0f1;
+  margin-top: 20px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(44, 62, 80, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup-header {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ecf0f1;
+}
+
+.popup-body {
+  font-size: 1rem;
+  color: #bdc3c7;
+  margin-bottom: 20px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popup-footer button {
+  padding: 10px 20px;
+  background: #34495e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup-footer button:hover {
+  transform: scale(1.05);
+}
+
+.popup-footer button:active {
+  transform: scale(1);
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container, .card-container {
+  animation: fadeIn 1s ease-out forwards;
+}
