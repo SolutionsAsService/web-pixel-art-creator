@@ -76,7 +76,7 @@ button:active {
 }
 
 /* Form Elements */
-input[type="text"], input[type="email"], input[type="password"], textarea, select {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="number"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -89,7 +89,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, input[type="number"]:focus {
   border-color: #ecf0f1;
   box-shadow: 0 0 5px rgba(236, 240, 241, 0.5);
   outline: none;
@@ -111,6 +111,7 @@ label {
 /* Checkboxes and Radio Buttons */
 input[type="checkbox"], input[type="radio"] {
   margin-right: 10px;
+  accent-color: #34495e;
 }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
@@ -123,6 +124,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  background: #ecf0f1;
 }
 
 table, th, td {
@@ -136,10 +138,12 @@ th, td {
 
 th {
   background: #2c3e50;
+  color: #ecf0f1;
 }
 
 td {
   background: #34495e;
+  color: #ecf0f1;
 }
 
 /* Lists */
